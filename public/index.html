@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дома</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <h1>Дома</h1>
+  <button id="addHouseBtn">Добавить дом</button>
+  <button id="findHouseBtn">Найти дом</button>
+
+  <div id="addHouseForm" style="display:none;">
+    <h2>Добавить дом</h2>
+    <form id="addForm">
+      <label for="street">Улица:</label>
+      <input type="text" id="street" name="street" required><br>
+      <label for="houseNumber">Номер дома:</label>
+      <input type="number" id="houseNumber" name="houseNumber" required><br>
+      <label for="floors">Этажность:</label>
+      <input type="number" id="floors" name="floors" required><br>
+      <label for="entrances">Подъезды:</label>
+      <input type="number" id="entrances" name="entrances" required><br>
+      <label for="material">Материал:</label>
+      <input type="text" id="material" name="material" required><br>
+      <label for="overlapping">Перекрытия:</label>
+      <input type="text" id="overlapping" name="overlapping" required><br>
+      <label for="roof">Крыша:</label>
+      <input type="text" id="roof" name="roof" required><br>
+      <label for="gasification">Газификация:</label>
+      <input type="checkbox" id="gasification" name="gasification"><br>
+      <label for="fireWaterSupply">Противопожарное водоснабжение:</label>
+      <input type="checkbox" id="fireWaterSupply" name="fireWaterSupply"><br>
+      <button type="submit">Добавить</button>
+    </form>
+  </div>
+
+  <div id="findHouseForm" style="display:none;">
+    <h2>Найти дом</h2>
+    <form id="findForm">
+      <label for="findStreet">Улица:</label>
+      <select id="findStreet" name="findStreet" required></select><br>
+      <label for="findHouseNumber">Номер дома:</label>
+      <select id="findHouseNumber" name="findHouseNumber" required></select><br>
+      <button type="submit">Найти</button>
+    </form>
+    <div id="houseDetails" style="display:none;">
+      <h3>Характеристики дома</h3>
+      <p id="houseFloors"></p>
+      <p id="houseEntrances"></p>
+      <p id="houseMaterial"></p>
+      <p id="houseOverlapping"></p>
+      <p id="houseRoof"></p>
+      <p id="houseGasification"></p>
+      <p id="houseFireWaterSupply"></p>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
